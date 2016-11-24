@@ -42,28 +42,38 @@ ADMINS = [
 
 MANAGERS = ADMINS
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "emis_may16",
+        "USER": "emisf13",
+        "PASSWORD": "saranraj3000",
+        "HOST": "",
+        "PORT": "",
+    }
+}
+
 # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql_psycopg2",
-#         "NAME": "emis_may16",
+#         "NAME": "emislive",
 #         "USER": "emisf13",
-#         "PASSWORD": "saranraj3000",
+#         "PASSWORD": "",
 #         "HOST": "",
 #         "PORT": "",
 #     }
 # }
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "staging",
-        "USER": "staging",
-#   "PASSWORD": "password123",
-        "HOST": "10.236.249.91",
-        "PORT": "5432",
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         "NAME": "staging",
+#         "USER": "staging",
+# #   "PASSWORD": "password123",
+#         "HOST": "10.236.249.91",
+#         "PORT": "5432",
     
-    }
-}
+#     }
+# }
 
 
 
@@ -153,7 +163,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
 
 MIDDLEWARE_CLASSES = [
-    "django.middleware.common.CommonMiddleware",
+    'django.middleware.common.CommonMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -188,12 +198,6 @@ INSTALLED_APPS = [
     'easy_pjax',
     'smart_selects',
     'csvimport',
-    #'teacher',
-   # 'school',
-    # theme
-
-
-    # external
     "emis_account",
     "eventlog",
     "metron",
@@ -202,7 +206,6 @@ INSTALLED_APPS = [
     'mailer',
     'braces',
     'django_extensions',
-
     'helpdesk',
     'django_markup',
     'markup_deprecated',
@@ -211,9 +214,6 @@ INSTALLED_APPS = [
     'axes',
     'session_security',
     'session_activity',
-    # 'cerberos',
-
-    # project
     "emis",
     "students",
     "baseapp",
@@ -222,9 +222,12 @@ INSTALLED_APPS = [
     "schoolnew",
     "reports",
     "reports_basic",
-    "bus_pass",
+    
     'captcha',
+    
     "schemes",
+    "pool",
+    "progress",
     
 
 
